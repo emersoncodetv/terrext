@@ -1,0 +1,21 @@
+{
+  "name": "terraformjs",
+  "version": "0.0.1",
+  "description": "Generación de archivos terraform a través de nodejs. Despliegue de terraform automatizado.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/terraformjs"
+  },
+  "keywords": [
+    "terraform"
+  ],
+  "author": "Serendipia.CO",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^15.1.0"
+  }
+}
