@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/terraformjs"
+    "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/sdpia-terraform-validator"
   },
   "keywords": [
     "terraform"

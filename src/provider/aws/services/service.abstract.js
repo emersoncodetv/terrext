@@ -3,6 +3,6 @@ const Service = (resources, dataSources) => {
     const dataSources = dataSources
 
     return {
-        
+        resource 
     }
 }
