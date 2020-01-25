@@ -1,0 +1,6 @@
+{
+  "[terraform]": {},
+  "files.associations": {
+    "*.tf.json": "terraform"
+  }
+}
