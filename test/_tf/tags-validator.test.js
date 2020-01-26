@@ -26,4 +26,22 @@ describe("Validador de keys en terraform file", () => {
   });
 });
 
-// describe("validador de tags");
+const hasFieldsRequired = require("../../src/_tf/tags-validator/hasFieldsRequired");
+const tagsRequiredDummy = require("../@simulation-data/tags-required-dummy");
+const tagsDummyData = require("../@simulation-data/tags-terraform-dummy");
+
+describe("validador de tags", () => {
+  test("Validando si los tags solicitados fueron proveidos en cada resource", () => {
+    const areSatisfiedTrue = hasFieldsRequired(
+      tagsRequiredDummy,
+      tagsDummyData.tagsAreSatisfied.tags
+    );
+    expect(true).toBe(areSatisfiedTrue);
+
+    const areSatisfiedFalse = hasFieldsRequired(
+      tagsRequiredDummy,
+      tagsDummyData.tagsAreNotSatisfied.tags
+    );
+    expect(false).toBe(areSatisfiedFalse);
+  });
+});

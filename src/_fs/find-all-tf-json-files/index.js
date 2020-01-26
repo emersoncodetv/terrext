@@ -6,29 +6,22 @@ const filterFilesGivenExt = require("../handlers/filter-files-given-ext");
 const pathsFromDir = require("../handlers/paths-from-dir");
 const realPathsFromFiles = require("../handlers/real-paths-from-files");
 
-function AllTFFiles(directory) {
-  directory = directory;
-  const extensionToFind = ".tf.json";
+const extensionToFind = ".tf.json";
 
-  function findAllTfJsonFiles(relativePath) {
-    const listOfItems = pathsFromDir(relativePath);
+function findTerraformFiles(relativePath) {
+  const listOfItems = pathsFromDir(relativePath);
 
-    let tfJsonFiles = filterFilesGivenExt(listOfItems, extensionToFind);
-    tfJsonFiles = realPathsFromFiles(relativePath, tfJsonFiles);
+  let tfJsonFiles = filterFilesGivenExt(listOfItems, extensionToFind);
+  tfJsonFiles = realPathsFromFiles(relativePath, tfJsonFiles);
 
-    let dirs = filterDirs(listOfItems, relativePath);
-    dirs.forEach(subDirectory => {
-      let subDirectoryPath = _path.resolve(relativePath, subDirectory);
-      let listFiles = findAllTfJsonFiles(subDirectoryPath);
-      tfJsonFiles = tfJsonFiles.concat(listFiles);
-    });
+  let dirs = filterDirs(listOfItems, relativePath);
+  dirs.forEach(subDirectory => {
+    let subDirectoryPath = _path.resolve(relativePath, subDirectory);
+    let listFiles = findTerraformFiles(subDirectoryPath);
+    tfJsonFiles = tfJsonFiles.concat(listFiles);
+  });
 
-    return tfJsonFiles;
-  }
-
-  return {
-    findAllTfJsonFiles
-  };
+  return tfJsonFiles;
 }
 
-module.exports = AllTFFiles;
+module.exports = findTerraformFiles;

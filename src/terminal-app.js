@@ -1,5 +1,5 @@
 const yargs = require("yargs");
-
+const findTerraformFiles = require("./_fs/find-all-tf-json-files");
 // const notes = require("./notes");
 
 // Customize yargs version
@@ -64,9 +64,17 @@ yargs.command({
 // Create list command
 yargs.command({
   command: "list",
-  describe: "List all notes",
-  handler() {
-    // notes.listNotes();
+  describe:
+    "Lista todos los realpath de cada archivo .tf.json en un directorio específico",
+  builder: {
+    path: {
+      describe: "Directorio proyecto Terraform | *.tf.json |",
+      type: "string",
+      demandOption: true
+    }
+  },
+  handler(argv) {
+    console.log(findTerraformFiles(argv.path));
   }
 });
 
