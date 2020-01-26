@@ -1,7 +1,7 @@
 {
   "name": "@serendipiaco/tfops",
   "version": "0.0.1",
-  "description": "Generación de archivos terraform a través de nodejs. Despliegue de terraform automatizado.",
+  "description": "Tools para la creación y validación de archivos terraform a través de nodejs. \n -- Despliegue de terraform automatizado. \n Validación de tags basado en reglas.",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
