@@ -44,3 +44,13 @@ test("Obtiene todos los elementos de un directorio", () => {
   const paths = pathsFromDir(directoryPath);
   expect(JSON.stringify(simulatedPaths.raw)).toBe(JSON.stringify(paths));
 });
+
+const parseJSONFromPath = require("../../src/fs/fs-handlers/parseJSON-from-path");
+
+test("Carga un objeto literal serializado y lo 'parsea' JSON.parse", () => {
+  const absolutePath = simulatedPaths.files[0];
+  const parseJSON = parseJSONFromPath(absolutePath);
+  expect(JSON.stringify(simulatedPaths.parseJSONDemo)).toBe(
+    JSON.stringify(parseJSON)
+  );
+});
