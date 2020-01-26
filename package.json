@@ -1,31 +1,30 @@
 {
   "name": "@serendipiaco/tfops",
-  "version": "0.0.1",
+  "version": "0.0.1a",
   "description": "Tools para la creación y validación de archivos terraform a través de nodejs. \n -- Despliegue de terraform automatizado. \n Validación de tags basado en reglas.",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
     "webpack-prod": "webpack --mode=production",
-    "test": "jest"
+    "test": "webpack --mode=production && jest"
   },
   "bin": {
     "tfops": "dist/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/sdpia-terraform-validator"
+    "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/sdpia-tfops"
   },
+  "homepage": "https://github.com/emersonvolkov/tfops#readme",
   "keywords": [
     "terraform"
   ],
   "author": "Serendipia.CO <contacto@serendipia.co> (https://serendipia.co)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@types/yargs": "^15.0.1",
     "jest": "^24.9.0",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.5",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "yargs": "^15.1.0"

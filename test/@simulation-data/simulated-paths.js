@@ -1,5 +1,5 @@
 const path = require("path");
-const absolutPath = path.resolve(__dirname, "../tf.json.test");
+const absolutPath = path.resolve(__dirname, "./dummy-project-tf");
 module.exports = {
   raw: ["level-1-A", "level-1-B", "root.tf.json"],
   dirs: ["level-1-A", "level-1-B"],

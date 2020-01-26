@@ -1,10 +1,10 @@
 const _path = require("path");
 
-const filterDirs = require("../fs-handlers/filter-dirs");
-const filterFilesGivenExt = require("../fs-handlers/filter-files-given-ext");
+const filterDirs = require("../handlers/filter-dirs");
+const filterFilesGivenExt = require("../handlers/filter-files-given-ext");
 
-const pathsFromDir = require("../fs-handlers/paths-from-dir");
-const realPathsFromFiles = require("../fs-handlers/real-paths-from-files");
+const pathsFromDir = require("../handlers/paths-from-dir");
+const realPathsFromFiles = require("../handlers/real-paths-from-files");
 
 function AllTFFiles(directory) {
   directory = directory;
