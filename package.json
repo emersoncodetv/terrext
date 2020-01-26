@@ -1,5 +1,5 @@
 {
-  "name": "tfops",
+  "name": "@serendipiaco/tfops",
   "version": "0.0.1",
   "description": "Generación de archivos terraform a través de nodejs. Despliegue de terraform automatizado.",
   "main": "index.js",
