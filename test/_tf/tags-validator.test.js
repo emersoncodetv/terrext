@@ -1,8 +1,8 @@
 const simulatedPaths = require("../@simulation-data/simulated-paths");
 
 const parseJSONFromPath = require("../../src/_fs/handlers/parseJSON-from-path");
-const _hasTags = require("../../src/_tf/tags-validator/hasTags");
-const _hasResource = require("../../src/_tf/tags-validator/hasResources");
+const _hasTags = require("../../src/_tf/handlers/hasTags");
+const _hasResource = require("../../src/_tf/handlers//has-resource");
 
 describe("Validador de keys en terraform file", () => {
   let parseJSON;
@@ -26,7 +26,7 @@ describe("Validador de keys en terraform file", () => {
   });
 });
 
-const hasFieldsRequired = require("../../src/_tf/tags-validator/hasFieldsRequired");
+const hasFieldsRequired = require("../../src/_tf/handlers/hasFieldsRequired");
 const tagsRequiredDummy = require("../@simulation-data/tags-required-dummy");
 const tagsDummyData = require("../@simulation-data/tags-terraform-dummy");
 

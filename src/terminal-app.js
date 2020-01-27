@@ -1,26 +1,36 @@
 const yargs = require("yargs");
 const findTerraformFiles = require("./_fs/find-all-tf-json-files");
-// const notes = require("./notes");
+const resources = require("./commands/resources");
 
 // Customize yargs version
-yargs.version("1.1.0");
+yargs.version("0.0.1a");
 
-// Create add command
+yargs.command({
+  command: "resources",
+  describe: "Lista los resources con sus respectivos nombres",
+  builder: {
+    file: {
+      describe: "Path a un archivo de terraform con extención *.tf.json",
+      type: "string",
+      // demandOption: true,
+      conflicts: "folder"
+    }
+  },
+  handler(argv) {
+    console.log(resources(argv.file));
+  }
+});
+
 yargs.command({
   command: "tags",
-  describe: "Add a new note",
+  describe: "Lista los tags de todos los recursos de un archivo de terraform",
   builder: {
-    show: {
-      describe: "Muesta todos los tags de un archivo terraform json",
-      demandOption: false,
-      type: "boolean",
-      default: false
+    file: {
+      describe: "Path a un archivo de terraform con extención *.tf.json",
+      type: "string",
+      // demandOption: true,
+      conflicts: "folder"
     }
-    // body: {
-    //   describe: "Note body to save",
-    //   demandOption: true,
-    //   type: "string"
-    // }
   },
   handler(argv) {
     console.log(argv);
@@ -28,58 +38,45 @@ yargs.command({
   }
 });
 
-// Create remove command
 yargs.command({
-  command: "remove",
-  describe: "Remove a note",
-  builder: {
-    title: {
-      describe: "Note title to remove",
-      demandOption: true,
-      type: "string"
-    }
-  },
-  handler(argv) {
-    // notes.removeNote(argv.title);
-  }
-});
-
-// Create read command
-yargs.command({
-  command: "read",
+  command: "validate",
   describe: "Read a file of notes and print it",
   builder: {
-    title: {
+    file: {
+      describe: "Path a un archivo de terraform con extención *.tf.json",
+      type: "string",
+      // demandOption: true,
+      conflicts: "folder"
+    },
+    folder: {
       describe: "Title of your note to show",
       type: "string",
-      demandOption: true
+      // demandOption: true,
+      conflicts: "file"
     }
   },
   handler(argv) {
+    console.log(argv);
     // notes.readNote(argv.title);
     // console.log(notes.getNotes());
   }
 });
 
-// Create list command
 yargs.command({
-  command: "list",
+  command: "paths",
   describe:
     "Lista todos los realpath de cada archivo .tf.json en un directorio específico",
   builder: {
-    path: {
+    folder: {
+      alias: "f",
       describe: "Directorio proyecto Terraform | *.tf.json |",
       type: "string",
       demandOption: true
     }
   },
   handler(argv) {
-    console.log(findTerraformFiles(argv.path));
+    console.log(findTerraformFiles(argv.folder));
   }
 });
-
-// add, remove, read, list
-
-// console.log(yargs.argv);
 
 module.exports = yargs;

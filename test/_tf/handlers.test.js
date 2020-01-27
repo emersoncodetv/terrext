@@ -1,8 +1,8 @@
 const simulatedPaths = require("../@simulation-data/simulated-paths");
 
 const parseJSONFromPath = require("../../src/_fs/handlers/parseJSON-from-path");
-const _hasTags = require("../../src/_tf/handlers/hasKey")("tags");
-const _hasResource = require("../../src/_tf/handlers/hasKey")("resource");
+const _hasTags = require("../../src/_tf/handlers/has-key")("tags");
+const _hasResource = require("../../src/_tf/handlers/has-key")("resource");
 
 describe("Validador dinamico de keys en un objeto literal", () => {
   let parseJSON;
