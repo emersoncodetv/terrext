@@ -10,13 +10,13 @@
     "unittest": "jest"
   },
   "bin": {
-    "tfops": "src/index.js"
+    "terrext": "src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/sdpia-tfops"
+    "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/sdpia-terrext"
   },
-  "homepage": "https://github.com/emersonvolkov/tfops#readme",
+  "homepage": "https://github.com/emersonvolkov/terrext#readme",
   "keywords": [
     "terraform"
   ],

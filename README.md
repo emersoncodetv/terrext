@@ -9,15 +9,18 @@ Esta herramienta ayuda a la validación de código terraform con extención \*.t
 Tools for terraform CI/CD
 
 ```shell
-$tfops --help
-tfops <command>
+$ terrext --help
+```
+
+```shell
+terrext <command>
 
 Commands:
-  tfops paths      Lista todos los realpath de cada archivo .tf.json en un
-                      directorio específico
-  tfops resources  Lista los resources con sus respectivos nombres
-  tfops tags       Lista los tags de todos los recursos de un archivo de
-                      terraform
+  terrext paths      Lista todos los realpath de cada archivo .tf.json en un
+                     directorio específico
+  terrext resources  Lista los resource con sus respectivos nombres
+  terrext tags       Lista los tags de todos los recursos de un archivo de
+                     terraform
 
 Options:
   --version  Show version number                                       [boolean]
