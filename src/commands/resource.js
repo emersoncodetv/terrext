@@ -11,8 +11,8 @@ const resources = ({ file: path }) => {
   );
 };
 
-exports.command = "resources";
-exports.describe = "Lista los resources con sus respectivos nombres";
+exports.command = "resource";
+exports.describe = "Lista los resource con sus respectivos nombres";
 exports.builder = {
   file: {
     describe: "Path a un archivo de terraform con extención *.tf.json",

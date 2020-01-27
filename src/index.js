@@ -1,14 +1,9 @@
-// const terminalApp = require("./terminal-app");
+#!/usr/bin/env node
 const yargs = require("yargs");
-const fs = require("fs");
-
-const version = fs.readFileSync("../package.json").toJSON().version;
 
 yargs
   .commandDir("commands")
   .demandCommand()
   .help().argv;
-
-yargs.version(version);
 
 yargs.parse();
