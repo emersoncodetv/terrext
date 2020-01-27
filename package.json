@@ -1,12 +1,13 @@
 {
-  "name": "@serendipiaco/tfops",
-  "version": "0.1.0-alpha01",
+  "name": "@serendipiaco/terrext",
+  "version": "0.0.0-alpha",
   "description": "Tools para la creación y validación de archivos terraform a través de nodejs. \n -- Despliegue de terraform automatizado. \n Validación de tags basado en reglas.",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
     "webpack-prod": "webpack --mode=production",
-    "test": "webpack --mode=production && jest"
+    "test": "webpack --mode=production && jest",
+    "unittest": "jest"
   },
   "bin": {
     "tfops": "src/index.js"

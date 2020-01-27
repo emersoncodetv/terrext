@@ -3,7 +3,7 @@ const getResourcesNames = require("../_tf/handlers/get-keys-resource-names");
 
 const parseJSONFromFile = require("../_fs/handlers/parseJSON-from-path");
 
-const resources = ({ file: path }) => {
+const resource = ({ file: path }) => {
   const terraform = parseJSONFromFile(path);
   const resources = getResources(terraform);
   return resources.map(resource =>
@@ -11,7 +11,9 @@ const resources = ({ file: path }) => {
   );
 };
 
-exports.command = "resource";
+const rules = ({ rules: path }) => {};
+
+exports.command = "resources";
 exports.describe = "Lista los resource con sus respectivos nombres";
 exports.builder = {
   file: {
@@ -22,7 +24,7 @@ exports.builder = {
   }
 };
 exports.handler = function(argv) {
-  console.log(resources(argv));
+  console.log(resource(argv));
 };
 
 // exports.builder = function(yargs) {
