@@ -1,6 +1,6 @@
 {
   "name": "@serendipiaco/tfops",
-  "version": "0.0.1a",
+  "version": "0.1.0-alpha01",
   "description": "Tools para la creación y validación de archivos terraform a través de nodejs. \n -- Despliegue de terraform automatizado. \n Validación de tags basado en reglas.",
   "main": "index.js",
   "scripts": {

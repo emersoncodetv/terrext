@@ -1,42 +1,42 @@
 const yargs = require("yargs");
-const findTerraformFiles = require("./_fs/find-all-tf-json-files");
-const resources = require("./commands/resources");
+const findTerraformFiles = require("../src/_fs/find-all-tf-json-files");
+const resources = require("../src/commands/resources");
 
 // Customize yargs version
 yargs.version("0.0.1a");
 
-yargs.command({
-  command: "resources",
-  describe: "Lista los resources con sus respectivos nombres",
-  builder: {
-    file: {
-      describe: "Path a un archivo de terraform con extención *.tf.json",
-      type: "string",
-      // demandOption: true,
-      conflicts: "folder"
-    }
-  },
-  handler(argv) {
-    console.log(resources(argv.file));
-  }
-});
+// yargs.command({
+//   command: "resources",
+//   describe: "Lista los resources con sus respectivos nombres",
+//   builder: {
+//     file: {
+//       describe: "Path a un archivo de terraform con extención *.tf.json",
+//       type: "string",
+//       // demandOption: true,
+//       conflicts: "folder"
+//     }
+//   },
+//   handler(argv) {
+//     console.log(resources(argv.file));
+//   }
+// });
 
-yargs.command({
-  command: "tags",
-  describe: "Lista los tags de todos los recursos de un archivo de terraform",
-  builder: {
-    file: {
-      describe: "Path a un archivo de terraform con extención *.tf.json",
-      type: "string",
-      // demandOption: true,
-      conflicts: "folder"
-    }
-  },
-  handler(argv) {
-    console.log(argv);
-    // notes.addNote(argv.title, argv.body);
-  }
-});
+// yargs.command({
+//   command: "tags",
+//   describe: "Lista los tags de todos los recursos de un archivo de terraform",
+//   builder: {
+//     file: {
+//       describe: "Path a un archivo de terraform con extención *.tf.json",
+//       type: "string",
+//       // demandOption: true,
+//       conflicts: "folder"
+//     }
+//   },
+//   handler(argv) {
+//     console.log(argv);
+//     // notes.addNote(argv.title, argv.body);
+//   }
+// });
 
 yargs.command({
   command: "validate",

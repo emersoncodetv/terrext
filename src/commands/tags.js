@@ -10,4 +10,15 @@ const list = path => {
   const listOfTags = getTagsFromResource(terraform.resource.aws_instance);
 };
 
-module.exports = list;
+exports.handler = list;
+exports.command = "tags";
+exports.describe =
+  "Lista los tags de todos los recursos de un archivo de terraform";
+exports.builder = {
+  file: {
+    describe: "Path a un archivo de terraform con extención *.tf.json",
+    type: "string",
+    // demandOption: true,
+    conflicts: "folder"
+  }
+};
