@@ -7,5 +7,13 @@
   "editor.rulers": [50, 60, 80],
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#ff4081"
-  }
+  },
+  "vsicons.associations.files": [
+    {
+      "icon": "test",
+      "extensions": [".test.js"],
+      "format": "svg",
+      "overrides": "testjs"
+    }
+  ]
 }
