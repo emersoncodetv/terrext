@@ -15,5 +15,9 @@
       "format": "svg",
       "overrides": "testjs"
     }
+  ],
+  "vsicons.associations.folders": [
+    { "icon": "json", "extensions": ["@data-simulation"], "format": "svg" },
+    { "icon": "test", "extensions": ["tdd"], "format": "svg" }
   ]
 }
