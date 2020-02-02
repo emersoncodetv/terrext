@@ -1,10 +1,10 @@
 const path = require("path");
-const expectedFilesPaths = require("../@simulation-data/expected-files-paths");
+const expectedFilesPaths = require("../../__datasimulated__/expected-files-paths");
 
-const findTerraformFiles = require("../../src/_fs/find-all-tf-json-files");
+const findTerraformFiles = require("./find-all-tf-json-files");
 const directoryPath = path.resolve(
   __dirname,
-  "../@simulation-data/dummy-project-tf"
+  "../../__datasimulated__/dummy-project-tf"
 );
 
 test("List all .tf.json files form a given directory", () => {

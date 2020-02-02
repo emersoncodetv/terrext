@@ -1,4 +1,4 @@
-const hasTags = require("./hasTags");
+const hasTags = require("./has-key")("tags");
 
 const getTags = resource => {
   if (hasTags(resource)) {

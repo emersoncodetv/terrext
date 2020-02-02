@@ -6,9 +6,8 @@
   "scripts": {
     "start": "node dist/index.js",
     "webpack-prod": "webpack --mode=production",
-    "test": "webpack --mode=production && jest",
     "unittest": "jest",
-    "tdd": "jest --testPathIgnorePatterns=__tests__"
+    "tdd": "jest --testPathIgnorePatterns=__tests__ --testPathIgnorePatterns=test2"
   },
   "bin": {
     "terrext": "dist/index.js"

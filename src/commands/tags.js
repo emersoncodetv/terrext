@@ -1,6 +1,6 @@
 const getTagsFromResource = require("../_tf/handlers/get-keys-tags-for-each-resource");
 const parseJSONFromFile = require("../_fs/handlers/parseJSON-from-path");
-const hasResources = require("../_tf/handlers//has-resource");
+const hasResources = require("../_tf/handlers/has-key")("resource");
 
 const list = path => {
   const terraform = parseJSONFromFile(path);
