@@ -1,6 +1,6 @@
-const getTagsFromResource = require("../_tf/handlers/get-keys-tags-for-each-resource");
-const parseJSONFromFile = require("../_fs/handlers/parseJSON-from-path");
-const hasResources = require("../_tf/handlers/has-key")("resource");
+const getTagsFromResource = require("../terraform-tools/handlers/get-keys-tags-for-each-resource");
+const parseJSONFromFile = require("../file-system-access/handlers/parseJSON-from-path");
+const hasResources = require("../terraform-tools/handlers/has-key")("resource");
 
 const list = path => {
   const terraform = parseJSONFromFile(path);
@@ -12,11 +12,10 @@ const list = path => {
 
 exports.handler = list;
 exports.command = "tags";
-exports.describe =
-  "Lista los tags de todos los recursos de un archivo de terraform";
+exports.describe = "List all tags for each resource in a terraform file.";
 exports.builder = {
   file: {
-    describe: "Path a un archivo de terraform con extención *.tf.json",
+    describe: "File path with extension *.tf.json",
     type: "string",
     // demandOption: true,
     conflicts: "folder"

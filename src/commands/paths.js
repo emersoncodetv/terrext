@@ -1,12 +1,11 @@
-const findTerraformFiles = require("../_fs/find-all-tf-json-files");
+const findTerraformFiles = require("../file-system-access/find-all-tf-json-files");
 
 exports.command = "paths";
-exports.describe =
-  "Lista todos los realpath de cada archivo .tf.json en un directorio específico";
+exports.describe = "Return all realpath for each .tf.json file in a folder.";
 exports.builder = {
   folder: {
     alias: "f",
-    describe: "Directorio proyecto Terraform | *.tf.json |",
+    describe: "Terraform Project folder | *.tf.json |",
     type: "string",
     demandOption: true
   }

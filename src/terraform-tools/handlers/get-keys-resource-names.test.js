@@ -13,7 +13,7 @@ const dummy = {
 
 const getResourcesNames = require("./get-keys-resource-names");
 
-const parseJSONFromFile = require("../../_fs/handlers/parseJSON-from-path");
+const parseJSONFromFile = require("../../file-system-access/handlers/parseJSON-from-path");
 
 test("Obtener una lista de objetos con los recursos y sus respectivos tags", () => {
   const terraform = parseJSONFromFile(dummy.path);

@@ -1,10 +1,10 @@
 # Herramientas para Terraform
 
-### terrext
+### Terrext
 
-#### CLI/CLA para la validación de código Terraform
+Terrext is a tool that help you to validate terraform code base in a given rules
 
-Esta herramienta ayuda a la validación de código terraform con extención \*.tf.json.
+Only accepts \*.tf.json.
 
 Tools for terraform CI/CD
 
@@ -13,16 +13,14 @@ $ terrext --help
 ```
 
 ```shell
-terrext <command>
+terrext [command]
 
 Commands:
-  terrext paths      Lista todos los realpath de cada archivo .tf.json en un
-                     directorio específico
-  terrext resources  Lista los resource con sus respectivos nombres
-  terrext tags       Lista los tags de todos los recursos de un archivo de
-                     terraform
+  terrext paths      Return all realpath for each .tf.json file in a folder.
+  terrext resources  List all resource with their custom names.
+  terrext tags       List all tags for each resource in a terraform file.
 
 Options:
   --version  Show version number                                       [boolean]
-  --help     Show help                                                 [boolean]
+  --help     Show help                                                 [boolean]                                  [boolean]
 ```

@@ -1,5 +1,5 @@
 const yargs = require("yargs");
-const findTerraformFiles = require("../src/_fs/find-all-tf-json-files");
+const findTerraformFiles = require("../src/file-system-access/find-all-tf-json-files");
 const resources = require("../src/commands/resources");
 
 // Customize yargs version
