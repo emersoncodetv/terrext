@@ -1,6 +1,6 @@
 const isDirectory = require("./is-directory");
 
-const readSubDirectories = (itemsInADir, relativePath) => {
+const readSubDirectories = (relativePath, itemsInADir) => {
   const onlyDir = itemsInADir.filter(item => isDirectory(relativePath, item));
   return onlyDir;
 };

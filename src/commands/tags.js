@@ -1,16 +1,8 @@
-const getTagsFromResource = require("../terraform-tools/handlers/get-keys-tags-for-each-resource");
-const parseJSONFromFile = require("../file-system-access/handlers/parseJSON-from-path");
-const hasResources = require("../terraform-tools/handlers/has-key")("resource");
+const showTags = require("../tr-tools/show-tags");
 
-const list = path => {
-  const terraform = parseJSONFromFile(path);
-  let listResource;
-  if (hasResources(terraform)) listResource = Object.keys(terraform);
-  else [];
-  const listOfTags = getTagsFromResource(terraform.resource.aws_instance);
+exports.handler = = function(argv) {
+  console.log(showTags(argv));
 };
-
-exports.handler = list;
 exports.command = "tags";
 exports.describe = "List all tags for each resource in a terraform file.";
 exports.builder = {

@@ -1,10 +1,10 @@
-const simulatedPaths = require("../../../__datasimulated__/simulated-paths");
+const simulatedPaths = require("../../../__dummydata__/simulated-paths");
 
-const parseJSONFromPath = require("../../file-system-access/handlers/parseJSON-from-path");
+const parseJSONFromPath = require("../../fs-access/handlers/parseJSON-from-path");
 const _hasTags = require("./has-key")("tags");
 const _hasResource = require("./has-key")("resource");
 
-describe("Validador de keys en terraform file", () => {
+const tdd = () => {
   let parseJSON;
   const absolutePath = simulatedPaths.files[0];
   parseJSON = parseJSONFromPath(absolutePath);
@@ -24,4 +24,6 @@ describe("Validador de keys en terraform file", () => {
     const hasTags_yes = _hasTags(parseJSON.resource);
     expect(true).toBe(hasTags_yes);
   });
-});
+};
+
+describe("has-key Validador de keys en terraform file", tdd);

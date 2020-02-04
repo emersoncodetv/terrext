@@ -3,7 +3,7 @@ const _path = require("path");
 const data = { aws_instance: ["example1", "example2"] };
 const path = _path.resolve(
   __dirname,
-  "../../../__datasimulated__/terraform-dummy.tf.json"
+  "../../../__dummydata__/terraform-dummy.tf.json"
 );
 
 const dummy = {
@@ -13,9 +13,9 @@ const dummy = {
 
 const getResourcesNames = require("./get-keys-resource-names");
 
-const parseJSONFromFile = require("../../file-system-access/handlers/parseJSON-from-path");
+const parseJSONFromFile = require("../../fs-access/handlers/parseJSON-from-path");
 
-test("Obtener una lista de objetos con los recursos y sus respectivos tags", () => {
+test("get-keys-resource-names Obtener una lista de objetos con los recursos y sus respectivos tags", () => {
   const terraform = parseJSONFromFile(dummy.path);
   const listOfResoruceNames = getResourcesNames(
     "aws_instance",

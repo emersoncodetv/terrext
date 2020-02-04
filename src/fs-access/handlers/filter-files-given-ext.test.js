@@ -1,10 +1,10 @@
 const path = require("path");
 
-const simulatedPaths = require("../../../__datasimulated__/simulated-paths");
+const simulatedPaths = require("../../../__dummydata__/simulated-paths");
 
 const filterFilesGivenExt = require("./filter-files-given-ext");
 
-test("Filtrar los elementos que solo tengan una extención espeficica", () => {
+test("filter-files-given-ext Filtrar los elementos que solo tengan una extención espeficica", () => {
   const filterFilesByExt = filterFilesGivenExt(
     simulatedPaths.files,
     ".tf.json"

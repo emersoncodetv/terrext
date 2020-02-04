@@ -10,11 +10,10 @@ const extensionToFind = ".tf.json";
 
 function findTerraformFiles(relativePath) {
   const listOfItems = pathsFromDir(relativePath);
-
   let tfJsonFiles = filterFilesGivenExt(listOfItems, extensionToFind);
   tfJsonFiles = realPathsFromFiles(relativePath, tfJsonFiles);
 
-  let dirs = filterDirs(listOfItems, relativePath);
+  let dirs = filterDirs(relativePath, listOfItems);
   dirs.forEach(subDirectory => {
     let subDirectoryPath = _path.resolve(relativePath, subDirectory);
     let listFiles = findTerraformFiles(subDirectoryPath);
