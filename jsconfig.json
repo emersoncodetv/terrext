@@ -1,0 +1,13 @@
+{
+  "typeAcquisition": {
+    "include": ["jest"]
+  },
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonJS",
+    "paths": {
+      "@dummydata/*": ["__dummydata__/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

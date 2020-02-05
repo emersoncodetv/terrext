@@ -1,6 +1,6 @@
 const path = require("path");
 
-const simulatedPaths = require("../../../__dummydata__/simulated-paths");
+const simulatedPaths = require("@dummydata/simulated-paths");
 
 const filterFilesGivenExt = require("./filter-files-given-ext");
 

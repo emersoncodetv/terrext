@@ -1,6 +1,6 @@
 {
   "name": "@serendipiaco/terrext",
-  "version": "0.0.8-alpha",
+  "version": "0.0.10-alpha",
   "description": "Tools para la creación y validación de archivos terraform a través de nodejs. \n -- Despliegue de terraform automatizado. \n Validación de tags basado en reglas.",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,11 @@
     "unittest": "jest --testPathIgnorePatterns=src",
     "tdd": "jest --testPathIgnorePatterns=__tests__ --testPathIgnorePatterns=test2"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "^@dummydata(.*)$": "<rootDir>/__dummydata__$1"
+    }
+  },
   "bin": {
     "terrext": "dist/index.js"
   },
@@ -16,7 +21,7 @@
     "type": "git",
     "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/sdpia-terrext"
   },
-  "homepage": "https://github.com/emersonvolkov/terrext#readme",
+  "homepage": "https://github.com/emersondevtoo/terrext#readme",
   "keywords": [
     "terraform"
   ],
@@ -24,6 +29,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "@types/jest": "^25.1.1",
     "jest": "^24.9.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",

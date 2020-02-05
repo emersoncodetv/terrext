@@ -1,4 +1,4 @@
-const simulatedPaths = require("../../../__dummydata__/simulated-paths");
+const simulatedPaths = require("@dummydata/simulated-paths");
 
 const parseJSONFromPath = require("../../fs-access/handlers/parseJSON-from-path");
 const _hasTags = require("./has-key")("tags");

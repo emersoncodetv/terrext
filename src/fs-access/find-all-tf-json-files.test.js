@@ -1,5 +1,5 @@
 const path = require("path");
-const expectedFilesPaths = require("../../__dummydata__/expected-files-paths");
+const expectedFilesPaths = require("@dummydata/expected-files-paths");
 
 const findTerraformFiles = require("./find-all-tf-json-files");
 const directoryPath = path.resolve(

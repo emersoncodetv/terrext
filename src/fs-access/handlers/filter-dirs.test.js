@@ -1,7 +1,7 @@
 const path = require("path");
 
 const filterDirs = require("./filter-dirs");
-const simulatedPaths = require("../../../__dummydata__/simulated-paths");
+const simulatedPaths = require("@dummydata/simulated-paths");
 
 const directoryPath = path.resolve(
   __dirname,

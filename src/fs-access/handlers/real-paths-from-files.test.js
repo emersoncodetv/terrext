@@ -1,5 +1,5 @@
 const realPathsFromFiles = require("./real-paths-from-files");
-const dummydata = require("../../../__dummydata__/real-paths-from-files");
+const dummydata = require("@dummydata/real-paths-from-files");
 
 const realPathsFromFilesTest = () => {
   const received = realPathsFromFiles(dummydata.path, dummydata.listOfFiles);

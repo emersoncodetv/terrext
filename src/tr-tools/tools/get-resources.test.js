@@ -1,6 +1,6 @@
 const findResources = require("./get-resources");
 
-const dummydata = require("../../../__dummydata__/expected-resources");
+const dummydata = require("@dummydata/expected-resources");
 
 const findResourcesTest = () => {
   const received = findResources({ file: dummydata.path });

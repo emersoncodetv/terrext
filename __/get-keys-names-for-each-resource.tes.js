@@ -11,8 +11,8 @@ const dummy = {
   path
 };
 
-const getTagsFromResource = require("./get-keys-tags-for-each-resource");
-const parseJSONFromFile = require("../../fs-access/handlers/parseJSON-from-path");
+const getTagsFromResource = require("./get-keys-names-for-each-resource");
+const parseJSONFromFile = require("../src/fs-access/handlers/parseJSON-from-path");
 
 test("get-keys-tags-for-each-resource Obtener una lista de objetos con los recursos y sus respectivos tags", () => {
   const terraform = parseJSONFromFile(dummy.path);

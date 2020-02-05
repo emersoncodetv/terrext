@@ -1,6 +1,6 @@
 const hasFieldsRequired = require("./has-fields-required");
-const tagsRequiredDummy = require("../../../__dummydata__/tags-required-dummy");
-const tagsDummyData = require("../../../__dummydata__/tags-terraform-dummy");
+const tagsRequiredDummy = require("@dummydata/tags-required-dummy");
+const tagsDummyData = require("@dummydata/tags-terraform-dummy");
 
 describe("has-fields-required validador de tags", () => {
   test("Validando si los tags solicitados fueron proveidos en cada resource", () => {

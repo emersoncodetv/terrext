@@ -1,4 +1,4 @@
-const getTags = require("./get-keys-tags");
+const getTags = require("../src/tr-tools/handlers/get-keys-tags-by-resource");
 
 const getTagsFromResource = resources => {
   const listResources = Object.keys(resources);

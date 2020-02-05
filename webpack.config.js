@@ -14,5 +14,10 @@ module.exports = {
   target: "node",
   plugins: [
     new webpack.BannerPlugin({ banner: "#!/usr/bin/env node", raw: true })
-  ]
+  ],
+  resolve: {
+    alias: {
+      "@dummydata": path.resolve(__dirname, "__dummydata__/")
+    }
+  }
 };
