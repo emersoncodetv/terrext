@@ -1,15 +1,19 @@
-const path = require("path");
+// MOCKS
 
-const simulatedPaths = require("@dummydata/simulated-paths");
+// DUMMYDATA
+const dummydata = require("@dummydata")(__filename);
+// IMPORTS
 
-const directoryPath = path.resolve(
-  __dirname,
-  "../../../__dummydata__/dummy-project-tf"
-);
-
+// CODE2TEST
 const pathsFromDir = require("./paths-from-dir");
 
-test("paths-from-dir Obtiene todos los elementos de un directorio", () => {
-  const paths = pathsFromDir(directoryPath);
-  expect(JSON.stringify(simulatedPaths.raw)).toBe(JSON.stringify(paths));
-});
+const pathsFromDirTest = () => {
+  const paths = pathsFromDir(dummydata.path);
+  expect(JSON.stringify(dummydata.raw)).toBe(JSON.stringify(paths));
+};
+
+const tdd = () => {
+  test("Obtiene todos los elementos de un directorio", pathsFromDirTest);
+};
+
+describe("paths-from-dir", tdd);

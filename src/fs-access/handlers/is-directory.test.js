@@ -1,13 +1,19 @@
-const path = require("path");
+// MOCKS
 
-const directoryPath = path.resolve(
-  __dirname,
-  "../../../__dummydata__/dummy-project-tf"
-);
+// DUMMYDATA
+const dummydata = require("@dummydata")(__filename);
+// IMPORTS
 
+// CODE2TEST
 const isDirectory = require("./is-directory");
 
-test("is-directory Valida si el path dado corresponde a un directorio", () => {
-  expect(true).toBe(isDirectory(directoryPath, "level-1-A"));
-  expect(false).toBe(isDirectory(directoryPath, "root.tf.json"));
-});
+const isDirectoryTest = () => {
+  expect(true).toBe(isDirectory(dummydata.path, "level-1-A"));
+  expect(false).toBe(isDirectory(dummydata.path, "root.tf.json"));
+};
+
+const tdd = () => {
+  test("Valida si el path dado corresponde a un directorio", isDirectoryTest);
+};
+
+describe("is-directory", tdd);

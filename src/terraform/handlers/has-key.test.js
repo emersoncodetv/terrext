@@ -1,7 +1,7 @@
 // MOCKS
 
 // DUMMYDATA
-const dummydata = require("@dummydata/")(__filename);
+const dummydata = require("@dummydata")(__filename);
 // IMPORTS
 const parseJSONFromPath = require("@fs-access/handlers/parseJSON-from-path");
 // CODE2TEST

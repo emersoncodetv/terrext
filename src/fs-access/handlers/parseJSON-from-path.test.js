@@ -1,18 +1,25 @@
-const path = require("path");
+// MOCKS
 
-const simulatedPaths = require("@dummydata/simulated-paths");
+// DUMMYDATA
+const dummydata = require("@dummydata")(__filename);
+// IMPORTS
 
-const directoryPath = path.resolve(
-  __dirname,
-  "../../../__dummydata__/dummy-project-tf"
-);
-
+// CODE2TEST
 const parseJSONFromPath = require("./parseJSON-from-path");
 
-test("parseJSON-from-path Carga un objeto literal serializado y lo 'parsea' JSON.parse", () => {
-  const absolutePath = simulatedPaths.files[0];
+const parseJSONFromPathTest = () => {
+  const absolutePath = dummydata.files[0];
   const parseJSON = parseJSONFromPath(absolutePath);
-  expect(JSON.stringify(simulatedPaths.parseJSONDemo)).toBe(
+  expect(JSON.stringify(dummydata.parseJSONDemo)).toBe(
     JSON.stringify(parseJSON)
   );
-});
+};
+
+const tdd = () => {
+  test(
+    "Carga un objeto literal serializado y lo 'parsea' JSON.parse",
+    parseJSONFromPathTest
+  );
+};
+
+describe("parseJSON-from-path", tdd);

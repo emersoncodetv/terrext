@@ -1,7 +1,7 @@
 // MOCKS
 
 // DUMMYDATA
-const dummydata = require("@dummydata/")(__filename);
+const dummydata = require("@dummydata")(__filename);
 // IMPORTS
 
 // CODE2TEST

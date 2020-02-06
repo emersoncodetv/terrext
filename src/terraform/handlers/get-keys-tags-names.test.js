@@ -1,7 +1,7 @@
 // MOCKS
 
 // DUMMYDATA
-const dummydata = require("@dummydata/")(__filename);
+const dummydata = require("@dummydata")(__filename);
 // IMPORTS
 const getProvider = require("@providers/get-provider");
 // CODE2TEST

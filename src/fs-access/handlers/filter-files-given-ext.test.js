@@ -1,16 +1,25 @@
-const path = require("path");
+// MOCKS
 
-const simulatedPaths = require("@dummydata/simulated-paths");
+// DUMMYDATA
+const dummydata = require("@dummydata")(__filename);
+// IMPORTS
 
+// CODE2TEST
 const filterFilesGivenExt = require("./filter-files-given-ext");
 
-test("filter-files-given-ext Filtrar los elementos que solo tengan una extención espeficica", () => {
-  const filterFilesByExt = filterFilesGivenExt(
-    simulatedPaths.files,
-    ".tf.json"
-  );
+const filterFilesGivenExtTest = () => {
+  const filterFilesByExt = filterFilesGivenExt(dummydata.files, ".tf.json");
   expect;
-  expect(JSON.stringify(simulatedPaths.files)).toBe(
+  expect(JSON.stringify(dummydata.files)).toBe(
     JSON.stringify(filterFilesByExt)
   );
-});
+};
+
+const tdd = () => {
+  test(
+    "Filtrar los elementos que solo tengan una extención espeficica",
+    filterFilesGivenExtTest
+  );
+};
+
+describe("filter-files-given-ext", tdd);

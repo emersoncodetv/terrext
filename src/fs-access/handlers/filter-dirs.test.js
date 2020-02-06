@@ -1,16 +1,15 @@
-const path = require("path");
+// MOCKS
 
+// DUMMYDATA
+const dummydata = require("@dummydata")(__filename);
+// IMPORTS
+
+// CODE2TEST
 const filterDirs = require("./filter-dirs");
-const simulatedPaths = require("@dummydata/simulated-paths");
-
-const directoryPath = path.resolve(
-  __dirname,
-  "../../../__dummydata__/dummy-project-tf"
-);
 
 const filterDirsTest = () => {
-  const dirs = filterDirs(directoryPath, simulatedPaths.raw);
-  const received = JSON.stringify(simulatedPaths.dirs);
+  const dirs = filterDirs(dummydata.path, dummydata.raw);
+  const received = JSON.stringify(dummydata.dirs);
   const expected = JSON.stringify(dirs);
   expect(received).toBe(expected);
 };
