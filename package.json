@@ -7,11 +7,16 @@
     "start": "node dist/index.js",
     "webpack-prod": "webpack --mode=production",
     "unittest": "jest --testPathIgnorePatterns=src",
-    "tdd": "jest --testPathIgnorePatterns=__tests__ --testPathIgnorePatterns=test2"
+    "tdd": "jest --testPathIgnorePatterns=__tests__ --testPathIgnorePatterns=__dummydata__"
   },
   "jest": {
     "moduleNameMapper": {
-      "^@dummydata(.*)$": "<rootDir>/__dummydata__$1"
+      "^@dummydata(.*)$": "<rootDir>/__dummydata__$1",
+      "^@terraform(.*)$": "<rootDir>/src/terraform$1",
+      "^@fs-access(.*)$": "<rootDir>/src/fs-access$1",
+      "^@mocks(.*)$": "<rootDir>/__mocks__$1",
+      "^@commands(.*)$": "<rootDir>/src/commands$1",
+      "^@providers(.*)$": "<rootDir>/src/providers$1"
     }
   },
   "bin": {

@@ -1,4 +1,4 @@
-const showTags = require("../tr-tools/show-tags");
+const showTags = require("@terraform/show-tags");
 
 exports.handler = function(argv) {
   console.dir(showTags(argv), { depth: null, colors: true });

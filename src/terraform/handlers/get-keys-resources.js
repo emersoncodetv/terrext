@@ -1,4 +1,4 @@
-const hasResource = require("./has-key")("resource");
+const hasResource = require("@terraform/handlers/has-key")("resource");
 
 const getResources = terraform => {
   if (hasResource(terraform)) {

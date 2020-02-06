@@ -1,4 +1,4 @@
-const findTerraformFiles = require("../fs-access/find-all-tf-json-files");
+const findTerraformFiles = require("@fs-access/find-all-tf-json-files");
 
 exports.command = "paths";
 exports.describe = "Return all realpath for each .tf.json file in a folder.";

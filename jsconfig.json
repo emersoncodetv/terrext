@@ -6,7 +6,12 @@
     "baseUrl": "./",
     "module": "commonJS",
     "paths": {
-      "@dummydata/*": ["__dummydata__/*"]
+      "@dummydata/*": ["__dummydata__/*"],
+      "@terraform/*": ["src/terraform/*"],
+      "@fs-access/*": ["src/fs-access/*"],
+      "@mocks/*": ["__mocks__/*"],
+      "@commands/*": ["src/commands/*"],
+      "@providers/*": ["src/providers/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

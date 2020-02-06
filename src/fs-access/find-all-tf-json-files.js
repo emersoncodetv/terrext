@@ -1,10 +1,10 @@
 const _path = require("path");
 
-const filterDirs = require("./handlers/filter-dirs");
-const filterFilesGivenExt = require("./handlers/filter-files-given-ext");
+const filterDirs = require("@fs-access/handlers/filter-dirs");
+const filterFilesGivenExt = require("@fs-access/handlers/filter-files-given-ext");
 
-const pathsFromDir = require("./handlers/paths-from-dir");
-const realPathsFromFiles = require("./handlers/real-paths-from-files");
+const pathsFromDir = require("@fs-access/handlers/paths-from-dir");
+const realPathsFromFiles = require("@fs-access/handlers/real-paths-from-files");
 
 const extensionToFind = ".tf.json";
 

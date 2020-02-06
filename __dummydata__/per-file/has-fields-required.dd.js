@@ -8,6 +8,9 @@ const tags = {
     tags: {
       Name: "tagsAreSatisfied"
     }
+  },
+  tagsRequiredDummy: {
+    Name: "string"
   }
 };
 

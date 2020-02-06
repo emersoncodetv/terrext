@@ -17,7 +17,12 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      "@dummydata": path.resolve(__dirname, "__dummydata__/")
+      "@dummydata": path.resolve(__dirname, "__dummydata__/"),
+      "@terraform": path.resolve(__dirname, "src/terraform/"),
+      "@fs-access": path.resolve(__dirname, "src/fs-access/"),
+      "@mocks": path.resolve(__dirname, "__mocks__/"),
+      "@commands": path.resolve(__dirname, "src/commands/"),
+      "@providers": path.resolve(__dirname, "src/providers/")
     }
   }
 };

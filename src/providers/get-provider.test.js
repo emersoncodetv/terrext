@@ -1,3 +1,10 @@
+// MOCKS
+
+// DUMMYDATA
+
+// IMPORTS
+
+// CODE2TEST
 const getProvider = require("./get-provider");
 
 const getProviderTest = () => {

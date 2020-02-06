@@ -1,4 +1,4 @@
-const getTags = require("../src/tr-tools/handlers/get-keys-tags-by-resource");
+const getTags = require("../src/terraform/handlers/get-keys-tags-by-resource");
 
 const getTagsFromResource = resources => {
   const listResources = Object.keys(resources);

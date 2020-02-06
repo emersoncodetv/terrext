@@ -1,5 +1,11 @@
+// MOCKS
+
+// DUMMYDATA
+
+// IMPORTS
+const getProvider = require("@providers/get-provider");
+// CODE2TEST
 const getTagsByProvider = require("./get-tags-by-provider");
-const getProvider = require("../../providers/get-provider");
 
 const getTagsByProviderTest = () => {
   const provider = getProvider("aws");

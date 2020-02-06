@@ -1,4 +1,4 @@
-const findResource = require("../tr-tools/show-resources");
+const findResource = require("@terraform/show-resources");
 
 exports.command = "resources";
 exports.describe = "List all resource with their custom names.";

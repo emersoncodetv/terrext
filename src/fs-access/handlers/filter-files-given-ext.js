@@ -1,4 +1,4 @@
-const hasExtension = require("./has-extension");
+const hasExtension = require("@fs-access/handlers/has-extension");
 
 function filesWithAGivenExtension(listOfFiles, extensionToFind) {
   return listOfFiles.filter(fileName =>

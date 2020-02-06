@@ -1,17 +1,18 @@
-const dummydata = require("@dummydata/tr-tools.tools.get-tags");
+// MOCKS
 
+// DUMMYDATA
+const dummydata = require("@dummydata/")(__filename);
+// IMPORTS
+
+// CODE2TEST
 const getTags = require("./get-tags");
 
 const getTagsAWSTest = () => {
   const received = getTags({
     provider: "aws",
-    file:
-      "/Users/emerson/Dev/SERENDIPIA/sdpia-tfops/__dummydata__/terraform-dummy.tf.json"
+    file: dummydata.path
   });
-  expect(received).toMatchObject([
-    { example1: { tags: ["Name"] } },
-    { example2: { tags: ["Name"] } }
-  ]);
+  expect(received).toMatchObject(dummydata.expected);
 };
 
 // const getTagsOCITest = () => {

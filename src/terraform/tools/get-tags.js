@@ -1,8 +1,10 @@
 const getProvider = require("../../providers/get-provider");
-const getKeysTagNames = require("../handlers/get-keys-tags-names");
-const getTagsByProvider = require("../handlers/get-tags-by-provider");
-const getResources = require("./get-resources");
-const parseJSONFromFile = require("../../fs-access/handlers/parseJSON-from-path");
+
+const getResources = require("@terraform/tools/get-resources");
+const getKeysTagNames = require("@terraform/handlers/get-keys-tags-names");
+const getTagsByProvider = require("@terraform/handlers/get-tags-by-provider");
+
+const parseJSONFromFile = require("@fs-access/handlers/parseJSON-from-path");
 
 const getTags = ({ provider, file: path }) => {
   provider = getProvider(provider);

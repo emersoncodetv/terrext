@@ -1,6 +1,11 @@
-const findResources = require("./get-resources");
+// MOCKS
 
-const dummydata = require("@dummydata/expected-resources");
+// DUMMYDATA
+const dummydata = require("@dummydata/")(__filename);
+// IMPORTS
+
+// CODE2TEST
+const findResources = require("./get-resources");
 
 const findResourcesTest = () => {
   const received = findResources({ file: dummydata.path });

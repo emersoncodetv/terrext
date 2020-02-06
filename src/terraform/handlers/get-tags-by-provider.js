@@ -1,4 +1,4 @@
-const hasTags = require("./has-key")("tags");
+const hasTags = require("@terraform/handlers/has-key")("tags");
 
 const getTags = providerObj => {
   if (hasTags(providerObj)) {
