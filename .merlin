@@ -6,4 +6,6 @@ FLG -nostdlib
 FLG -w +a-4-9-40-41-42-50-102
 S src/fs-access/handlers
 B lib/bs/src/fs-access/handlers
+S src/providers
+B lib/bs/src/providers
 ####BSB GENERATED: NO EDIT}
