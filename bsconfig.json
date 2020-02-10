@@ -1,0 +1,9 @@
+{
+  "name": "@serendipiaco/terrext",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ]
+}

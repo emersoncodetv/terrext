@@ -1,0 +1,17 @@
+# ninja log v5
+# start_time end_time mtime command hash
+0	95	1581289189384748090	src/fs-access/handlers/hasExtension.reast	a9d74618242c4a66
+95	104	1581289189394488147	src/fs-access/handlers/hasExtension.d	121df16a4f0c1a05
+104	123	1581289189412784470	src/fs-access/handlers/hasExtension.cmj	b2d4415e7ce4361e
+104	123	1581289189412784470	src/fs-access/handlers/hasExtension.cmi	b2d4415e7ce4361e
+104	123	1581289189412784470	/Users/emerson/Dev/SERENDIPIA/sdpia-tfops/lib/js/src/fs-access/handlers/hasExtension.js	b2d4415e7ce4361e
+0	23	1581289224136271204	src/fs-access/handlers/hasExtension.reast	a9d74618242c4a66
+23	29	1581289224136271204	src/fs-access/handlers/hasExtension.d	121df16a4f0c1a05
+29	43	1581289224157135626	src/fs-access/handlers/hasExtension.cmj	b2d4415e7ce4361e
+29	43	1581289224157135626	src/fs-access/handlers/hasExtension.cmi	b2d4415e7ce4361e
+29	43	1581289224157135626	/Users/emerson/Dev/SERENDIPIA/sdpia-tfops/lib/js/src/fs-access/handlers/hasExtension.js	b2d4415e7ce4361e
+0	83	1581292294550233194	src/fs-access/handlers/has_extension.reast	6b1d5cf7e0ce43a0
+83	102	1581292294568899465	src/fs-access/handlers/has_extension.d	e7c9f76244a0ece6
+102	121	1581292294587678248	src/fs-access/handlers/has_extension.cmj	a7af525bdff720a
+102	121	1581292294587678248	src/fs-access/handlers/has_extension.cmi	a7af525bdff720a
+102	121	1581292294587678248	/Users/emerson/Dev/SERENDIPIA/sdpia-tfops/lib/js/src/fs-access/handlers/has_extension.js	a7af525bdff720a

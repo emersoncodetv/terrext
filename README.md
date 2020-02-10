@@ -52,11 +52,18 @@ Options:
 ]
 ```
 
-### `terrext tags --file "/path/to/folder/root.tf.json" --provider "shortname"`
+### `terrext tags --file "/path/to/file.tf.json" --provider "shortname"`
 
 ```
 [
   { example1: { tags: [ 'Name' ] } },
   { example2: { tags: [ 'Name' ] } }
 ]
+
+{
+  tags: {
+    example1: [ 'Name' ],
+    example2: [ 'Name' ]
+  }
+}
 ```

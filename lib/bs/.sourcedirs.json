@@ -1,0 +1,1 @@
+{ "dirs" : [ "src" , "src/commands" , "src/fs-access" , "src/fs-access/handlers" , "src/providers" , "src/terraform" , "src/terraform/handlers" , "src/terraform/tools" ] , "pkgs" : [ [ "bs-platform" , "/Users/emerson/Dev/SERENDIPIA/sdpia-tfops/node_modules/bs-platform" ] ] , "generated" : [] }
